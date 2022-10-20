@@ -78,10 +78,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "68783febc7782c6c5cb401fbda4de5a9898be1762314da0bb2c10ced61f18b0c"
 
 [[package]]
+name = "loading"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "676420b03272176423578148eee61319e893422694f6d96a394841cb0901357f"
+
+[[package]]
 name = "mlrc"
 version = "0.1.0"
 dependencies = [
  "clap",
+ "loading",
 ]
 
 [[package]]
