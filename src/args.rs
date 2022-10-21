@@ -10,6 +10,12 @@ pub struct ArgsManager {
     /// the data file path
     pub data_path: std::path::PathBuf,
 
+    //fixme the d
+    // pub : u32,
+
+    /// optional the delimiter for the csv file (defaults to ,)
+    pub delimiter: Option<String>,
+
     #[clap(subcommand)]
     pub model: Models
 }
