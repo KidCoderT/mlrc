@@ -1,8 +1,4 @@
-use clap::{
-    Args,
-    Parser,
-    Subcommand
-};
+use clap::{Args, Parser, Subcommand};
 
 #[derive(Debug, Parser)]
 #[clap(author, version, about)]
@@ -10,14 +6,14 @@ pub struct ArgsManager {
     /// the data file path
     pub data_path: std::path::PathBuf,
 
-    //fixme the d
-    // pub : u32,
-
+    /// the column index that the model should predict
+    pub prediction_column: usize,
+    
     /// optional the delimiter for the csv file (defaults to ,)
     pub delimiter: Option<String>,
 
     #[clap(subcommand)]
-    pub model: Models
+    pub model: Models,
 }
 
 #[derive(Debug, Subcommand)]
